@@ -1,6 +1,9 @@
 #include "mainwindow.h"
 
 #include <QApplication>
+#include <QPushButton>
+#include <QLabel>
+#include <QLayout>
 
 int main(int argc, char *argv[])
 {

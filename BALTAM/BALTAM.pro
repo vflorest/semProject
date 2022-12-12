@@ -1,4 +1,6 @@
-QT       += core gui
+QT       +=\
+    core gui
+    widgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -10,13 +12,22 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    choosingthememenu.cpp \
+    doublespinboxdelegate.cpp \
+    matrixoperator.cpp
 
 HEADERS += \
-    mainwindow.h
+    inversamatriz.h \
+    mainwindow.h \
+    choosingthememenu.h \
+    doublespinboxdelegate.h \
+    matrixoperator.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    choosingthememenu.ui \
+    matrixoperator.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
