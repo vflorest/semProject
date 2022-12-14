@@ -122,6 +122,20 @@ void MatrixOperator::on_sustButton_clicked()
         QMessageBox::about(this, "Row or Column dismatch!", "Asegura que las matrices tengan los mismos parámetros para poder restarlas.");
     }else{
         QMessageBox::about(this, "Not implemented yet.", "Estamos trabajando para ud.");
+        mModelRes->clear();
+        mModelRes->setRowCount(row_A);
+        mModelRes->setColumnCount(col_A);
+        for(int xi=0; xi<row_A;xi++){
+            for(int ji=0; ji<col_A;ji++){
+                const double aij = getValueAt(mModelA, xi, ji);
+                const double bij = getValueAt(mModelB, xi, ji);
+                const double rij = aij - bij;
+                mModelRes->setItem(xi, ji, new QStandardItem(QString::number(rij)));
+            }
+        }
+        ResultView resView(nullptr, mModelRes);
+        resView.setModal(true);
+        resView.exec();
     }
 
 }
