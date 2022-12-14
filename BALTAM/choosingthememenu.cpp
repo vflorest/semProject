@@ -1,7 +1,5 @@
 #include "choosingthememenu.h"
 #include "mainwindow.h"
-#include "operate2.h"
-#include "metodonewton.h"
 #include "ui_choosingthememenu.h"
 
 ChoosingThemeMenu::ChoosingThemeMenu(QWidget *parent, MainWindow *w)
@@ -29,5 +27,21 @@ void ChoosingThemeMenu::on_menuPrincipalButton_clicked()
 void ChoosingThemeMenu::on_salirButton_clicked()
 {
     QApplication::quit();
+}
+
+
+void ChoosingThemeMenu::on_opt1Button_clicked()
+{
+    MatrixOperator mOperator(nullptr);
+    mOperator.setModal(true);
+    mOperator.exec();
+}
+
+
+void ChoosingThemeMenu::on_opt2Button_clicked()
+{
+    OneMatrixOperator oneMOperator(nullptr);
+    oneMOperator.setModal(true);
+    oneMOperator.exec();
 }
 

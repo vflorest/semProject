@@ -15,19 +15,25 @@ SOURCES += \
     mainwindow.cpp \
     choosingthememenu.cpp \
     doublespinboxdelegate.cpp \
-    matrixoperator.cpp
+    matrixoperator.cpp \
+    onematrixoperator.cpp \
+    resultview.cpp
 
 HEADERS += \
     inversamatriz.h \
     mainwindow.h \
     choosingthememenu.h \
     doublespinboxdelegate.h \
-    matrixoperator.h
+    matrixoperator.h \
+    onematrixoperator.h \
+    resultview.h
 
 FORMS += \
     mainwindow.ui \
     choosingthememenu.ui \
-    matrixoperator.ui
+    matrixoperator.ui \
+    onematrixoperator.ui \
+    resultview.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -33,7 +33,7 @@
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="opt1Button">
        <property name="minimumSize">
         <size>
          <width>0</width>
@@ -41,12 +41,12 @@
         </size>
        </property>
        <property name="text">
-        <string>Operar con 2 Matrices</string>
+        <string>Operaciones básicas con matrices</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="opt2Button">
        <property name="minimumSize">
         <size>
          <width>0</width>
@@ -54,7 +54,7 @@
         </size>
        </property>
        <property name="text">
-        <string>Operar sobre 1 matriz</string>
+        <string>Operar sobre una matriz</string>
        </property>
       </widget>
      </item>

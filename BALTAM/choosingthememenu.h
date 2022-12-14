@@ -2,8 +2,8 @@
 #define CHOOSINGTHEMEMENU_H
 
 #include "mainwindow.h"
-
-
+#include "matrixoperator.h"
+#include "onematrixoperator.h"
 #include <QDialog>
 
 namespace Ui {
@@ -26,6 +26,10 @@ public slots:
 private slots:
 
     void on_salirButton_clicked();
+
+    void on_opt1Button_clicked();
+
+    void on_opt2Button_clicked();
 
 private:
     Ui::ChoosingThemeMenu *ui;
