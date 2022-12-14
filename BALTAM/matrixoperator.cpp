@@ -82,12 +82,34 @@ void MatrixOperator::on_backButton_clicked()
 }
 
 
+double MatrixOperator::getValueAt(QStandardItemModel *model, int fila, int col) const{
+    auto item = model ->item(fila, col);
+    if(!item){
+        return 0.0;
+    }
+    return item->text().toDouble();
+
+}
+
+void MatrixOperator::appendTo(QStandardItemModel *model, double value) const
+{
+    for(int xi=0;xi<row_A; xi++){
+        for(int xj=0;xj>col_B;xj++){
+            if(!model->item(xi, xj)){
+                model->setItem(xi, xj, new QStandardItem(QString::number(value)));
+                return;
+            }
+        }
+    }
+}
+
+
 void MatrixOperator::on_sumButton_clicked()
 {
     if (row_A != row_B || col_A != col_B){
         QMessageBox::about(this, "Row or Column dismatch!", "Asegura que las matrices tengan los mismos parámetros para poder sumarlas.");
     }else{
-        QMessageBox::about(this, "Not implemented yet.", "Estamos trabajando para ud.");
+        //QMessageBox::about(this, "Not implemented yet.", "Estamos trabajando para ud.");
         mModelRes->clear();
         mModelRes->setRowCount(row_A);
         mModelRes->setColumnCount(col_A);
@@ -106,22 +128,12 @@ void MatrixOperator::on_sumButton_clicked()
 }
 
 
-double MatrixOperator::getValueAt(QStandardItemModel *model, int fila, int col) const{
-    auto item = model ->item(fila, col);
-    if(!item){
-        return 0.0;
-    }
-    return item->text().toDouble();
-
-}
-
-
 void MatrixOperator::on_sustButton_clicked()
 {
     if (row_A != row_B || col_A != col_B){
         QMessageBox::about(this, "Row or Column dismatch!", "Asegura que las matrices tengan los mismos parámetros para poder restarlas.");
     }else{
-        QMessageBox::about(this, "Not implemented yet.", "Estamos trabajando para ud.");
+        //QMessageBox::about(this, "Not implemented yet.", "Estamos trabajando para ud.");
         mModelRes->clear();
         mModelRes->setRowCount(row_A);
         mModelRes->setColumnCount(col_A);
@@ -142,7 +154,24 @@ void MatrixOperator::on_sustButton_clicked()
 
 void MatrixOperator::on_multButton_clicked()
 {
-    QMessageBox::about(this, "Not implemented yet.", "Estamos trabajando para ud.");
+    //QMessageBox::about(this, "Not implemented yet.", "Estamos trabajando para ud.");
+    mModelRes->clear();
+    double sum;
+    for(int xi = 0; xi<row_A;xi++){
+        for(int xj=0;xj<col_B; xj++){
+            sum = 0.0;
+            for(int xk = 0; xk<row_B;xk++){
+                const double aij = getValueAt(mModelA, xi, xk);
+                const double bij = getValueAt(mModelB, xk, xj);
+                const double ab = aij*bij;
+                sum+=ab;
+            }
+            appendTo(mModelRes, sum);
+        }
+    }
+    ResultView resView(nullptr, mModelRes);
+    resView.setModal(true);
+    resView.exec();
 }
 
 

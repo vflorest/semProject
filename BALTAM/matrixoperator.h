@@ -20,6 +20,7 @@ class MatrixOperator : public QDialog
 public:
     explicit MatrixOperator(QWidget *parent = nullptr);
     double getValueAt(QStandardItemModel *model, int fila, int col) const;
+    void appendTo(QStandardItemModel *model, double value) const;
     ~MatrixOperator();
 
 public slots:
@@ -40,6 +41,8 @@ public slots:
     void on_sustButton_clicked();
 
     void on_multButton_clicked();
+
+
 
 private:
     Ui::MatrixOperator *ui;
