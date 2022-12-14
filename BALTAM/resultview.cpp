@@ -15,3 +15,15 @@ ResultView::~ResultView()
 {
     delete ui;
 }
+
+void ResultView::on_exitButton_clicked()
+{
+    QApplication::quit();
+}
+
+
+void ResultView::on_backButton_clicked()
+{
+    this->close();
+}
+

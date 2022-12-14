@@ -94,7 +94,7 @@ double MatrixOperator::getValueAt(QStandardItemModel *model, int fila, int col) 
 void MatrixOperator::appendTo(QStandardItemModel *model, double value) const
 {
     for(int xi=0;xi<row_A; xi++){
-        for(int xj=0;xj>col_B;xj++){
+        for(int xj=0;xj<col_B;xj++){
             if(!model->item(xi, xj)){
                 model->setItem(xi, xj, new QStandardItem(QString::number(value)));
                 return;
@@ -156,6 +156,8 @@ void MatrixOperator::on_multButton_clicked()
 {
     //QMessageBox::about(this, "Not implemented yet.", "Estamos trabajando para ud.");
     mModelRes->clear();
+    mModelRes->setRowCount(row_A);
+    mModelRes->setColumnCount(col_B);
     double sum;
     for(int xi = 0; xi<row_A;xi++){
         for(int xj=0;xj<col_B; xj++){

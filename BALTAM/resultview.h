@@ -18,6 +18,11 @@ public:
     explicit ResultView(QWidget *parent = nullptr, QStandardItemModel *mModelRes=nullptr);
     ~ResultView();
 
+private slots:
+    void on_exitButton_clicked();
+
+    void on_backButton_clicked();
+
 private:
     Ui::ResultView *ui;
     QStandardItemModel *resModel;
