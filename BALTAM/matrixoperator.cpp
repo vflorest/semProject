@@ -33,6 +33,12 @@ void MatrixOperator::on_exitButton_clicked()
 }
 
 
+void MatrixOperator::on_backButton_clicked()
+{
+    this->close();
+}
+
+
 void MatrixOperator::on_mSpinBoxA_valueChanged(int arg1)
 {
     if(arg1>row_A){
@@ -76,12 +82,6 @@ void MatrixOperator::on_nSpinBoxB_valueChanged(int arg1)
 }
 
 
-void MatrixOperator::on_backButton_clicked()
-{
-    this->close();
-}
-
-
 double MatrixOperator::getValueAt(QStandardItemModel *model, int fila, int col) const{
     auto item = model ->item(fila, col);
     if(!item){
@@ -93,8 +93,10 @@ double MatrixOperator::getValueAt(QStandardItemModel *model, int fila, int col) 
 
 void MatrixOperator::appendTo(QStandardItemModel *model, double value) const
 {
-    for(int xi=0;xi<row_A; xi++){
-        for(int xj=0;xj<col_B;xj++){
+    const int rowCount = model->rowCount();
+    const int colCount = model->columnCount();
+    for(int xi=0;xi<rowCount; xi++){
+        for(int xj=0;xj<colCount;xj++){
             if(!model->item(xi, xj)){
                 model->setItem(xi, xj, new QStandardItem(QString::number(value)));
                 return;

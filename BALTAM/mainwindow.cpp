@@ -15,11 +15,9 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
 void MainWindow::on_continue_button_clicked()
 {
     ChoosingThemeMenu choosingTheme(nullptr, this);
     choosingTheme.setModal(true);
     choosingTheme.exec();
 }
-
