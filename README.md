@@ -5,6 +5,12 @@ En este software encontraras las opciones de "Operaciones básicas con matrices"
 
 Proceso de instalación. 
 
+Para la instalación del pograma presisamos de tener instalado el software de QT con la finalidad de agregar un "INCLLUDEPATH += $$PWD" en el archivo .pro en caso de trabajar con el compilador de windows. 
+
+1. Descargar el archivo del proyecto B.A.L.T.A.M. en .zip y descomprimelo.
+
+2. Ejecuta el programa con QT en modo Release una sola vez
+
 Para la instalación del programa presisamos de lo siguiente.
 
 Links relevantes. 
