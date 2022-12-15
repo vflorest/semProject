@@ -23,4 +23,17 @@ Para la instalación del pograma presisamos de tener instalado el software de QT
 
 Para la instalación del programa presisamos de lo siguiente.
 
-Links relevantes. 
+Utilización del programa. 
+
+Una vez hecho el proceso de instalación es momento de disfrutar de B.A.L.T.A.M.
+
+Es un  programa de gran sencilles, pero aun as´s sabemos que pueden existir complicaciones, por eso te dejamos esta pequeña guia de uso. 
+
+- Al abrir B.A.L.T.A.M. te encontraras con un menu muy simple con dos opciones, salir (para cerrar el programa) y continuar (para desplegar las opciones a elegir). 
+- Luego de esto podras encontrar 2 opciones nuevas, operaciones básicas con matrices (para sumas, restas y multiplicaciones) y operar sobre una matriz (para la diagonal, la traspuesta y la inversa).
+- Al seleccionar cualquiera de las dos opciones podrás ingresar los datos de tus matrices a trabajar en los spiners marcados como *M* y *N* (en el caso de la segunda opción solo seria una matriz).
+- Tendras en la parte inferior una serie de botones que te permitiran cambiar entre las distintas operaciones que quieras realizar con las o la matriz ingresada. 
+- En caso de ingrsar una matriz no funcional para la operación deseada se le avisara a travéz de un mensaje en pantalla. 
+- Al finalizar su trabajo presione el boton de *salir* y se habra cerrado el programa. 
+
+MUCHAS GRACIAS POR UTILIZAR B.A.L.T.A.M.
